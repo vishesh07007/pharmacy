@@ -1,3 +1,4 @@
+package com.sunrise.pharmacy.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -40,6 +41,16 @@ public class Medicine {
     
     @Column(name = "category")
     private String category;
+
+     public Medicine(String name, String description, String manufacturer, 
+                   Double price, Integer stockQuantity, String category) {
+        this.name = name;
+        this.description = description;
+        this.manufacturer = manufacturer;
+        this.price = price;
+        this.stockQuantity = stockQuantity;
+        this.category = category;
+    }
 
     
 
