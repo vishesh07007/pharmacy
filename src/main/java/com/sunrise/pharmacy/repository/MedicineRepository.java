@@ -13,7 +13,7 @@ public interface MedicineRepository extends JpaRepository<Medicine, Long> {
 
     List<Medicine> findByNameContainingIgnoreCase(String name);
 
-     List<Medicine> findByCategory(String category);
+    List<Medicine> findByCategory(String category);
     
     List<Medicine> findByStockQuantityLessThan(Integer quantity);
     
