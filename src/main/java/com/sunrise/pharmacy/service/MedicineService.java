@@ -2,6 +2,10 @@ package com.sunrise.pharmacy.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.sunrise.pharmacy.model.Medicine;
+import com.sunrise.pharmacy.repository.MedicineRepository;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MedicineService {
@@ -13,5 +17,35 @@ public class MedicineService {
         return medicineRepository.findAll();
     }
 
-    public Medicine get
+    public Medicine getMedicineByid(Long id){
+        Optional<Medicine> medicine = medicineRepository.findById(id);
+        return medicine.orElse(null);
+    }
+
+    public Medicine savMedicine(Medicine medicine){
+        return medicineRepository.save(medicine);
+    }
+
+    public void deleteMedicine(Long id){
+        medicineRepository.deleteById(id);
+    }
+
+    public List<Medicine> getMedicinesByCategory(String category) {
+        return medicineRepository.findByCategory(category);
+    }
+
+    public List<Medicine> getLowStockMedicines() {
+        return medicineRepository.findByStockQuantityLessThan(10);
+    }
+
+    public Medicine updateStock(Long medicineId,Integer newQuantity){
+        Medicine medicine = getMedicineByid(medicineId);
+        if(medicine !=null){
+            medicine.setStockQuantity(newQuantity);
+            return medicineRepository.save(medicine);
+        }
+        return null;
+        }
+    
+
 }
