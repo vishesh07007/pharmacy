@@ -5,15 +5,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.sunrise.pharmacy.service.MedicineService;
+
 @Controller
 @RequestMapping("/medicines")
 public class MedicineController {
 
     @Autowired
-    private medicineController;
+    private MedicineService medicineService;
 
     @GetMapping
-    public String ListMedicine
+    public String 
     
 
 }
