@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:insert="fragments/header :: copy">
+<head>
+    <title th:text="${title}">Upload Prescription</title>
+</head>
+<body>
+    <div th:fragment="content">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="mb-0">📄 Upload Prescription</h4>
+                    </div>
+                    <div class="card-body">
+                        <form th:action="@{/prescriptions/upload}" method="post">
+                            <div class="mb-3">
+                                <label for="customerName" class="form-label">Customer Name *</label>
+                                <input type="text" class="form-control" id="customerName" name="customerName" 
+                                       required placeholder="Enter customer full name">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="customerPhone" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="customerPhone" name="customerPhone" 
+                                       required placeholder="Enter 10-digit phone number" pattern="[0-9]{10}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="preferredPickupTime" class="form-label">Preferred Pickup Time *</label>
+                                <input type="datetime-local" class="form-control" id="preferredPickupTime" 
+                                       name="preferredPickupTime" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="notes" class="form-label">Additional Notes</label>
+                                <textarea class="form-control" id="notes" name="notes" rows="3" 
+                                          placeholder="Any special instructions or notes about the prescription..."></textarea>
+                            </div>
+
+                            <div class="alert alert-info">
+                                <small>
+                                    💡 <strong>Note:</strong> Please bring the original prescription when you come to pick up the medicines.
+                                    Our staff will verify the prescription before handing over the medicines.
+                                </small>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit Prescription</button>
+                                <a th:href="@{/}" class="btn btn-outline-secondary">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set minimum datetime to current time
+        document.getElementById('preferredPickupTime').min = new Date().toISOString().slice(0, 16);
+    </script>
+</body>
+</html> -->

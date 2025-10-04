@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.sunrise.pharmacy.service.CustomerService;
 
-import main.java.com.sunrise.pharmacy.model.Customer;
+import com.sunrise.pharmacy.model.Customer;  
 
 @Controller
 @RequestMapping("/customers")

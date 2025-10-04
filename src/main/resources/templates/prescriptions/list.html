@@ -1,0 +1,48 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:insert="fragments/header :: copy">
+<head>
+    <title th:text="${title}">Prescriptions</title>
+</head>
+<body>
+    <div th:fragment="content">
+        <h2 th:text="${title}">Prescriptions</h2>
+        
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Customer Name</th>
+                        <th>Phone</th>
+                        <th>Pickup Time</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="prescription : ${prescriptions}">
+                        <td th:text="${prescription.id}">1</td>
+                        <td th:text="${prescription.customerName}">John Doe</td>
+                        <td th:text="${prescription.customerPhone}">9876543210</td>
+                        <td th:text="${#temporals.format(prescription.preferredPickupTime, 'dd/MM/yyyy HH:mm')}">01/01/2024 14:30</td>
+                        <td>
+                            <span th:classappend="'badge bg-' + 
+                                (${prescription.status} == 'PENDING' ? 'warning' : 
+                                 ${prescription.status} == 'READY' ? 'success' : 'info')"
+                                th:text="${prescription.status}">PENDING</span>
+                        </td>
+                        <td>
+                            <a th:href="@{/prescriptions/update-status/{id}(id=${prescription.id}, status='PROCESSING')}" 
+                               class="btn btn-sm btn-outline-warning" th:if="${prescription.status == 'PENDING'}">Start Processing</a>
+                            <a th:href="@{/prescriptions/update-status/{id}(id=${prescription.id}, status='READY')}" 
+                               class="btn btn-sm btn-outline-success" th:if="${prescription.status == 'PROCESSING'}">Mark Ready</a>
+                            <a th:href="@{/prescriptions/update-status/{id}(id=${prescription.id}, status='COMPLETED')}" 
+                               class="btn btn-sm btn-outline-info" th:if="${prescription.status == 'READY'}">Complete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html> -->
