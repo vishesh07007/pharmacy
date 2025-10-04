@@ -1,11 +1,13 @@
 package com.sunrise.pharmacy.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import com.sunrise.pharmacy.model.Medicine;
-import com.sunrise.pharmacy.repository.MedicineRepository;
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sunrise.pharmacy.model.Medicine;
+import com.sunrise.pharmacy.repository.MedicineRepository;
 
 @Service
 public class MedicineService {
@@ -22,7 +24,7 @@ public class MedicineService {
         return medicine.orElse(null);
     }
 
-    public Medicine savMedicine(Medicine medicine){
+    public Medicine saveMedicine(Medicine medicine){
         return medicineRepository.save(medicine);
     }
 
