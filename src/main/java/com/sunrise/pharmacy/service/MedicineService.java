@@ -48,6 +48,10 @@ public class MedicineService {
         }
         return null;
         }
+
+    public List<Medicine> searchMedicines(String keyword) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
     
 
 }
