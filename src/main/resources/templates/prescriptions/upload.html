@@ -1,63 +1,76 @@
-<!-- <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:insert="fragments/header :: copy">
-<head>
-    <title th:text="${title}">Upload Prescription</title>
-</head>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout(~{::content})}">
 <body>
     <div th:fragment="content">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="mb-0">📄 Upload Prescription</h4>
-                    </div>
-                    <div class="card-body">
-                        <form th:action="@{/prescriptions/upload}" method="post">
-                            <div class="mb-3">
-                                <label for="customerName" class="form-label">Customer Name *</label>
-                                <input type="text" class="form-control" id="customerName" name="customerName" 
-                                       required placeholder="Enter customer full name">
+        <div class="content opacity-0 fade-in-up" style="animation: fadeInUp 0.5s forwards;">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="glass-card p-5">
+                            <div class="text-center mb-5">
+                                <div class="feature-icon bg-icon-primary mx-auto mb-3">
+                                    <i class="bi bi-cloud-upload"></i>
+                                </div>
+                                <h2 class="fw-bold gradient-text">Upload Prescription</h2>
+                                <p class="text-muted">Submit your prescription details securely.</p>
                             </div>
 
-                            <div class="mb-3">
-                                <label for="customerPhone" class="form-label">Phone Number *</label>
-                                <input type="tel" class="form-control" id="customerPhone" name="customerPhone" 
-                                       required placeholder="Enter 10-digit phone number" pattern="[0-9]{10}">
-                            </div>
+                            <form th:action="@{/prescriptions/upload}" method="post">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <label for="customerName" class="form-label fw-semibold">Customer Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control form-control-lg" id="customerName" name="customerName" 
+                                               required placeholder="Full Name">
+                                    </div>
 
-                            <div class="mb-3">
-                                <label for="preferredPickupTime" class="form-label">Preferred Pickup Time *</label>
-                                <input type="datetime-local" class="form-control" id="preferredPickupTime" 
-                                       name="preferredPickupTime" required>
-                            </div>
+                                    <div class="col-md-6">
+                                        <label for="customerPhone" class="form-label fw-semibold">Phone Number <span class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control form-control-lg" id="customerPhone" name="customerPhone" 
+                                               required placeholder="10-digit number" pattern="[0-9]{10}">
+                                    </div>
 
-                            <div class="mb-3">
-                                <label for="notes" class="form-label">Additional Notes</label>
-                                <textarea class="form-control" id="notes" name="notes" rows="3" 
-                                          placeholder="Any special instructions or notes about the prescription..."></textarea>
-                            </div>
+                                    <div class="col-12">
+                                        <label for="preferredPickupTime" class="form-label fw-semibold">Preferred Pickup Time <span class="text-danger">*</span></label>
+                                        <input type="datetime-local" class="form-control form-control-lg" id="preferredPickupTime" 
+                                               name="preferredPickupTime" required>
+                                    </div>
 
-                            <div class="alert alert-info">
-                                <small>
-                                    💡 <strong>Note:</strong> Please bring the original prescription when you come to pick up the medicines.
-                                    Our staff will verify the prescription before handing over the medicines.
-                                </small>
-                            </div>
+                                    <div class="col-12">
+                                        <label for="notes" class="form-label fw-semibold">Additional Notes</label>
+                                        <textarea class="form-control" id="notes" name="notes" rows="3" 
+                                                  placeholder="Any special instructions..."></textarea>
+                                    </div>
+                                </div>
 
-                            <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-primary btn-lg">Submit Prescription</button>
-                                <a th:href="@{/}" class="btn btn-outline-secondary">Cancel</a>
-                            </div>
-                        </form>
+                                <div class="alert alert-primary d-flex align-items-center mt-4 border-0 bg-primary bg-opacity-10 text-primary">
+                                    <i class="bi bi-info-circle-fill me-3 fs-4"></i>
+                                    <div>
+                                        <small class="fw-bold d-block">Important Requirement</small>
+                                        <small>Please confirm you carry the original prescription during pickup.</small>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid gap-3 mt-4">
+                                    <button type="submit" class="btn btn-primary-custom btn-lg shadow-lg">Submit Request</button>
+                                    <a th:href="@{/}" class="btn btn-outline-secondary btn-sm border-0">Cancel and Return Home</a>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script>
-        // Set minimum datetime to current time
-        document.getElementById('preferredPickupTime').min = new Date().toISOString().slice(0, 16);
-    </script>
+        <script>
+            // Set minimum datetime to current time
+            document.getElementById('preferredPickupTime').min = new Date().toISOString().slice(0, 16);
+        </script>
+        <style>
+            @keyframes fadeInUp {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        </style>
+    </div>
 </body>
-</html> -->
+</html>

@@ -14,6 +14,7 @@ public class HomeController {
         model.addAttribute("welcomeMessage", "Welcome to Sunrise Pharmacy Management System");
         return "home";
     }
+    
 
     @GetMapping("/about")
     public String about(Model model){

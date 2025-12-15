@@ -1,6 +1,9 @@
-// package com.sunrise.pharmacy.controller;
+ package com.sunrise.pharmacy.controller;
 
-// public class PrescriptionController {
-  //kjnkjn
+ import org.springframework.stereotype.Controller;
 
-// }
+ @Controller
+ public class PrescriptionController {
+
+
+}

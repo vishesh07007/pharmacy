@@ -1,0 +1,153 @@
+/* Modern Pharmacy Design System */
+:root {
+    --primary-color: #0d9488; /* Teal 600 */
+    --primary-dark: #0f766e; /* Teal 700 */
+    --primary-light: #ccfbf1; /* Teal 100 */
+    --secondary-color: #f59e0b; /* Amber 500 */
+    --accent-color: #6366f1; /* Indigo 500 */
+    --text-main: #1e293b; /* Slate 800 */
+    --text-muted: #64748b; /* Slate 500 */
+    --bg-body: #f1f5f9; /* Slate 100 */
+    --bg-card: #ffffff;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.025em;
+}
+
+/* Navbar Styling */
+.navbar-custom {
+    background-color: var(--bg-card);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    color: var(--primary-color) !important;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-muted) !important;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+    background-color: var(--primary-light);
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    box-shadow: 0 4px 6px -1px rgba(13, 148, 136, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.4);
+    color: white;
+}
+
+.btn-outline-custom {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    padding: 0.6rem 1.4rem;
+    transition: all 0.2s;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+/* Cards & Glassmorphism */
+.card-scale {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-scale:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+}
+
+.feature-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.bg-icon-primary { background-color: var(--primary-light); color: var(--primary-color); }
+.bg-icon-secondary { background-color: #fce7f3; color: #db2777; }
+.bg-icon-accent { background-color: #e0e7ff; color: #4f46e5; }
+.bg-icon-warning { background-color: #fef3c7; color: #d97706; }
+
+/* Hero Section */
+.hero-section {
+    padding: 4rem 0;
+    background-image: radial-gradient(circle at 100% 0%, var(--primary-light) 0%, transparent 25%), 
+                      radial-gradient(circle at 0% 100%, #e0e7ff 0%, transparent 25%);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: -webkit-linear-gradient(315deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Footer */
+footer {
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    margin-top: auto;
+}

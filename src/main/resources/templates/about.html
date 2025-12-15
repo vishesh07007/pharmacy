@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:insert="fragments/header :: copy">
-<head>
-    <title>About Us</title>
-</head>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout(~{::content})}">
 <body>
     <div th:fragment="content">
-        <h2>About Sunrise Pharmacy</h2>
-        <p>This is a college project demonstrating a pharmacy management system.</p>
-        <p>Features include prescription management, inventory tracking, and customer management.</p>
+        <div class="container py-5">
+            <div class="glass-card p-5">
+                <h2 class="fw-bold mb-4 gradient-text">About Sunrise Pharmacy</h2>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <p class="lead text-muted">A comprehensive pharmacy management system designed for efficiency and care.</p>
+                        <hr class="my-4">
+                        <p>This project demonstrates a modern approach to managing a medical store inventory, prescription workflows, and customer relationships.</p>
+                        
+                        <h5 class="mt-4 fw-bold">Key Features</h5>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Digital Prescription Management</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Real-time Inventory Tracking</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Customer History & Profiles</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
