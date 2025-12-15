@@ -26,8 +26,8 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand" th:href="@{/}">
-                <i class="bi bi-capsule-pill text-primary"></i>
-                <span style="color: var(--primary-dark)">Sunrise</span>Pharmacy
+                <img th:src="@{/images/logo.jpg}" alt="Sunrise Pharmacy" height="40" class="me-2 rounded-circle">
+                <span><span style="color: var(--primary-dark)">Sunrise</span>Pharmacy</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -67,7 +67,10 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <h5 class="fw-bold mb-3"><i class="bi bi-capsule-pill me-2 text-primary"></i>Sunrise Pharmacy</h5>
+                    <h5 class="fw-bold mb-3 d-flex align-items-center">
+                        <img th:src="@{/images/logo.jpg}" alt="Logo" height="30" class="me-2 rounded-circle">
+                        Sunrise Pharmacy
+                    </h5>
                     <p class="text-muted small">Your trusted partner in health and wellness. We provide quality medicines and exceptional care for our community.</p>
                 </div>
                 <div class="col-lg-2 col-6">
