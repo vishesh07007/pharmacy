@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout(~{::content})}">
+<body>
+    <div th:fragment="content">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <div class="glass-card p-5">
+                        <div class="mb-4">
+                            <i class="bi bi-exclamation-octagon text-danger display-1 opacity-75"></i>
+                        </div>
+                        
+                        <h1 class="fw-bold gradient-text mb-3">Oops! Something went wrong</h1>
+                        
+                        <div class="mb-4">
+                            <p class="text-muted mb-1">We couldn't process your request.</p>
+                            <p class="text-muted small" th:if="${status}" th:text="'Error Code: ' + ${status}">Error Code: 500</p>
+                            <p class="text-muted small" th:if="${error}" th:text="${error}">Unexpected Error</p>
+                        </div>
+
+                        <div class="d-grid gap-2 col-8 mx-auto">
+                            <a th:href="@{/}" class="btn btn-primary-custom">
+                                <i class="bi bi-house-door me-2"></i>Return to Home
+                            </a>
+                            <a href="#" onclick="history.back()" class="btn btn-outline-secondary btn-sm border-0">
+                                <i class="bi bi-arrow-left me-2"></i>Go Back
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
