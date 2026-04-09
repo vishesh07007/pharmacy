@@ -189,4 +189,3 @@ Example markdown block for a screenshot (replace with your real URLs):
 ## License
 
 This project is for learning and demonstration purposes. You can adapt it for your own experiments or as a starting point for a real pharmacy system. Add a formal license (e.g. MIT) if you plan to publish it publicly.
-
