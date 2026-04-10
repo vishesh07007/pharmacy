@@ -1,11 +1,11 @@
-# Sunrise Pharmacy Management Web Application : <br>
+# Pharmacy Management Web Application : 
 
 > A modern Spring Boot web application for managing a small pharmacy / medical store — medicines, customers, and prescription requests — with a clean, responsive UI built using Thymeleaf.
 
 
 ## Project Description : Sunrise Pharmacy Management
 
-The **Sunrise Pharmacy Management** web application is a focused tool designed to help a pharmacy streamline day‑to‑day operations.  
+The ** Pharmacy Management** web application is a focused tool designed to help a pharmacy streamline day‑to‑day operations.  
 It provides a simple, intuitive interface for managing medicine inventory, customer details, and prescription requests, making it easier to serve patients quickly and accurately.
 
 
@@ -67,16 +67,22 @@ It provides a simple, intuitive interface for managing medicine inventory, custo
   - Compatible with Spring Tool Suite (STS), IntelliJ IDEA, Eclipse, or any Maven‑capable IDE.
 
 
+    
+## Project Structure
+<img width="631" height="1392" alt="Screenshot 2026-04-10 145139" src="https://github.com/user-attachments/assets/6e417b4c-da06-46c0-9ffe-ba024738b6ec" />
+
+
+
+
 ## Getting Started
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/pharmacy.git
+git clone https://github.com/vishesh07007/pharmacy.git
 cd pharmacy
 ```
 
-> Replace `your-username` and repository name with your actual GitHub details if different.
 
 
 ### 2. Import into Your IDE
@@ -184,8 +190,3 @@ Example markdown block for a screenshot (replace with your real URLs):
 - Add authentication and role‑based access (e.g. Admin vs. Staff).
 - Generate printable invoices and basic sales reports.
 - Add pagination and advanced filtering for large medicine/customer lists.
-
-
-## License
-
-This project is for learning and demonstration purposes. You can adapt it for your own experiments or as a starting point for a real pharmacy system. Add a formal license (e.g. MIT) if you plan to publish it publicly.
